@@ -2,8 +2,6 @@ package com.example.binancepriceticker
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.View
 import android.widget.*
 import com.google.gson.annotations.SerializedName
