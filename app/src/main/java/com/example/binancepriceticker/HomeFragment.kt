@@ -107,17 +107,6 @@ class HomeFragment : Fragment() {
         )
     }
 
-    private fun unsubscribe() {
-        webSocketClient.send(
-            "{\n" +
-                    "    \"type\": \"UNSUBSCRIBE\",\n" +
-                    "    \"params\": [\"btcusdt@ticker\",\"ethusdt@ticker\",\"usdttry@ticker\"],\n" +
-                    "    \"id\": 2\n" +
-                    "}"
-        )
-    }
-
-
     override fun onResume() {
         super.onResume()
         initWebSocket()
