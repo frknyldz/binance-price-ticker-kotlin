@@ -19,7 +19,12 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 import java.io.Serializable
 
+
 class MainActivity : AppCompatActivity() {
+    companion object {
+        const val binanceUrl = "wss://stream.binance.com:9443/ws"
+    }
+
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

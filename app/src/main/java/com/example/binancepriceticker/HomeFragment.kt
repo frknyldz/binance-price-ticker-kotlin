@@ -19,10 +19,6 @@ class HomeFragment : Fragment() {
 
     val TAG = "HomeFragment"
 
-    companion object {
-        const val binanceUrl = "wss://stream.binance.com:9443/ws"
-    }
-
     private lateinit var webSocketClient: WebSocketClient
 
     private var _binding: FragmentHomeBinding? = null
@@ -47,7 +43,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun initWebSocket() {
-        val binanceUri: URI? = URI(binanceUrl)
+        val binanceUri: URI? = URI(MainActivity.binanceUrl)
 
         createWebSocketClient(binanceUri)
 
