@@ -85,10 +85,12 @@ class HomeFragment : Fragment() {
             val symbol = adapter.fromJson(message)
             if (symbol?.s.equals("BTCUSDT"))
                 activity?.runOnUiThread { binding.btcusdtVal.setText(symbol?.c) }
-            if (symbol?.s.equals("ETHUSDT"))
+            else if (symbol?.s.equals("ETHUSDT"))
                 activity?.runOnUiThread { binding.ethusdtVal.setText(symbol?.c)  }
-            if (symbol?.s.equals("USDTTRY"))
+            else if (symbol?.s.equals("USDTTRY"))
                 activity?.runOnUiThread { binding.usdtTryVal.setText(symbol?.c)  }
+            else
+                return
         }
 
     }
@@ -97,7 +99,9 @@ class HomeFragment : Fragment() {
         webSocketClient.send(
             "{\n" +
                     "    \"method\": \"SUBSCRIBE\",\n" +
-                    "    \"params\": [\"btcusdt@ticker\",\"ethusdt@ticker\",\"usdttry@ticker\"],\n" +
+                    "    \"params\": [\"btcusdt@ticker\"," +
+                                     "\"ethusdt@ticker\"," +
+                                     "\"usdttry@ticker\"],\n" +
                     "    \"id\": 1\n" +
                     "}"
         )
