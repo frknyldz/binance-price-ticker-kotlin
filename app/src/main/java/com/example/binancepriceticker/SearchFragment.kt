@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.binancepriceticker.databinding.FragmentHomeBinding
 import com.example.binancepriceticker.databinding.FragmentSearchBinding
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
